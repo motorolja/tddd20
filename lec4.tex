@@ -1,0 +1,38 @@
+\section{Lektion 4}
+\textbf{Dynamisk Programmering}
+
+\begin{itemize}
+\item{\textbf{Idata:}
+
+    En mängd positiva heltal $I$ s.a. \(1 \epsilon I\), ett positivt heltal $x$
+  }
+\item{\textbf{Utdata:}
+    En sekvens \(S = (i_1,\ldots,i_k)\) av tal från $I$ s.a. \(x =
+    \sum{i_j}{j=1}{k}\) och $S$ är så kort som möjligt.
+  }
+
+\item{\textbf{Lednoter för lösning:}
+    Matrislösning(\( 1 = man nått fram, 0 = ej nått fram\))
+    \begin{itemize}
+      \item $j$ på ena axeln, där $j$ indikerar sekvensens längd
+      \item $i$ mostsvarar det tal man nått fram till,
+      \end{itemize}
+      Induktions bevis är lämpligt för denna uppgift, varför?\\
+
+      Tidskomplexitet, mätt i indata storlek: \(O((2^{||x||})^2*|I|)\)\\
+      \(\exp(a,n)\)
+      \begin{itemize}
+      \item om $n$ är jämn: \(c=\exp(a,n/2)\) ret \(c*c\) ger \(O(\log{2}*n)\)
+      \item om $n$ är udda: \(c=\exp(a,\div{n-1}{2})\) ret \(a*c*c\) ger \(O(2^{\log{n}*n})
+        = O(||n||)\)
+
+      \end{itemize}
+  }
+  
+\end{itemize}
+  
+
+\subsection{Sidnoter}
+
+Vilken metod ska man använda? (dynamisk programmering, rekursiv nedbrytning)\\
+Svar: Gå på känsla

@@ -1,0 +1,65 @@
+\section{Lektion 3}
+
+\begin{itemize}
+\item{\textbf{Rekursiv nedbrytning:}
+
+    Andra namn: Söndra härska, Rekursiv dekomposition
+
+    \textit{Majoritet:}
+    \begin{itemize}
+      \item{Instans. Sekvens av objekt \([O_1,\ldots,O_n]\)}
+      \item{Fråga: Förekommer något objekt i majoritet, dvs strikt fler än
+          \([n/2]\) ggr. \([1,1,1,2,3]\) med komplexitet \(O(n\log(n))\)
+        }
+      \item{Svar:
+          \begin{equation}
+            a = MAJ[0_1,\ldots,0_{n/2}]
+            b = MAJ[0_{n/2+1},\ldots,0_{n}]
+            Antag [a,b \neq NEJ]: \text{Om \(a\) är i majoritet i \([0_1,\ldots,0_n]\) så return \(a\)}
+            \text{Om \(b\) är i majoritet i \([0_1,\ldots,0_n]\) så return \(b\)}
+          \end{equation}
+
+        }
+    \end{itemize}
+
+    \textit{Multiplikation av heltal:}
+    \begin{equation}
+      WX \\
+      \times YZ \\\hline
+      
+    \end{equation}
+    Räkning rakt av \(O(n^2)\)
+    
+    
+    }
+
+    \textit{:}
+    \begin{itemize}
+    \item{indata: Givet logisk formel på 3-CNF \(F=G_1\and\ldots\and\C_m\)}
+    \item{Utdata: En logisk tilldelning som gör minst hälften av alla
+        klausuler sanna.}
+    \item{Bevis, induktion över antal variabler:\\
+        Bas: \(n=1 \rightarrow (p)\or(p\and\neg{p}\ldots) \)\\
+        Hypotes: Påståendet gäller då \(n=k\)\\
+        Visa att påståendet gäller då \(n=k+1\)\\
+        \begin{enumerate}
+        \item{Välj godtyckligt en variabel \(p\)}
+          \item{\(F_1 = \text{alla klausuler som innehåller} p [p,\neg p]\)}
+          \item{\(F_2 = \text{alla klausuler som inte innehåller} p\),
+              induktions hypotes ger att det finns en tilldelning av rätt typ.
+              Välj $p$ som max antal klausuler är satisferade }
+            \item{ TODO: gör algoritmen som beviset get}
+        \end{enumerate}
+        TODO: gör algoritmen som beviset get
+      }
+
+      }
+    \end{itemize}
+    
+  \end{itemize}
+
+  \subsection{Sidnoter}
+  Binärsökning, starta i mitten störren mindre än, kasta andra halvan, forsätt
+  tills målet är nått.
+
+  Kommer man på rekursiva lösningar så finns det nästan alltid ett induktionsbevis.

@@ -1,0 +1,63 @@
+\section{Lecture 2}
+\begin{itemize}
+\item{\textbf{Giriga algoritmer:}
+    \textit{2 - färgning:}
+    
+    indata: En graf \(G=(V,E)\)
+    Fråga: Kan grafens noder färgas med två färger?
+
+    En graf med 4 samanbundna noder, varje nod med gradtal 2. Svar ja.
+
+    Motivering:
+
+    \begin{array}{l | l}
+      JA & NEJ \\\hline
+      Ja man kan lita på p.g.a. att konkret lösning, konstrueras.
+
+         & Udda antal noder kan alltid med graphanalys där antal noder är 1
+           eller \(\g 3\) alltid färgas. Bevis antag att detta inte är fallet.
+                                                                
+    \end{array}
+    \textit{Nodhölje(täckning av alla kanter från x antal noder):}
+
+    Täckning med minimalt antal noder:
+    \begin{enumerate}
+    \item Börja vid ett löv
+    \item Gå en nivån up till nästa nod via en kant
+    \item Ta bort alla kanter som är täckta av noden
+    \item Repitera tills alla kanter är täckta
+    \end{enumerate}
+
+    \textit{Punkt-intervall/täckning:}
+    \begin{itemize}
+    \item{Indata: Mängd punkter, mängd intervall}
+    \item{Utdata: En delmängd av intervallen som täcker alla punkter och har
+        minimal storlek.}
+      \item{Bevis: Antag att \(A\) inte är en optimal algoritm för problemet. Då
+          finns en instans punkt-intervall \(I\) så att
+          \(|(OPT(I)| \lt |(A(I))|\)
+          Antag att \(I\) har minimalt antal punkter. \(OPT(I)\) täcker \(x\)
+          med \(J_B^1,\ldots,J_B^k\) svaret från \(A\) täcker x med \(J_A\)
+          Betrakta instansen \(I\prime\) som är \(I\) där punktmängden
+          reducerats med alla punkter som täcks av \(J_A\).
+          \begin{equation}
+            |A(I\prime)| = |A(I)| - 1
+            |OPT(I\prime)| \lt |OPT(I)| \lt |A(I)| = |A(I\prime)| + 1
+            |A(I)| - |OPT(I\prime)| \gt 2
+            |A(I\prime)| + 1 - |OPT(I\prime)| \gt 2
+            [I\prime innehåller färre punkter än I |A(I\prime)| = |OPT(I\prime)|]
+            |A(I\prime)| + 1 - |A(I\prime)| \gt 2
+            0 \gt 1
+          \end{equation}
+      }
+    \end{itemize}
+      
+    
+  }
+\item{\textbf{Rekursiv nedbrytning:}
+
+  }
+\item{\textbf{Dynamisk programmering:}
+    
+  }
+\end{itemize}

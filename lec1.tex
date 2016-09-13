@@ -1,0 +1,53 @@
+\section{Lektion 1}
+\(sum_i i = 1 \rightarrow n = n(n+1)/(2)\)
+Induktion:
+Bassteg: testa n=1
+
+Induktionshypotesen: Antag att likheten gäller för godtyckligt n, e.g. n = k
+
+Induktion steg: Visa att likheten gäller då n = k+1
+sumi i=1 -> k+1 = ()
+
+Motsägelsebevis:
+För att visa påstående P antag icke P. Visa att det leder till motsägelse.
+
+x^2 - y^2 = 1  saknar heltalslösningar då x,y>0
+Antag att x,y>0 är heltal och x^2 - y^2 = 1
+konjugat: (x+y)(x-y) = 1
+I: x+y = 1, x-y = 1 -> x = 1, y = 0
+II: x+y=-1, x-y=-1 -> x = -1, y = 0
+
+Algoritm analys:
+tre metoder för att ränka ordo(kan ha missförståt), en för söndra härska, en rekursiva
+
+Fibonachi talen
+T(1)=T(2)=1
+T(n)=T(n-1) + T(n-2)
+
+svar: 'O(F(n))' O(c^2) där c är en konstant
+
+indata --> A --> svar
+
+A går i polynomisk tid omm
+\begin{itemize}
+  A tar max p(||indata||) tid där p är ett fixt polynom.
+\end{itemize}
+
+En proposition är en variabel som kan ta två värden {0,1} (true/false)
+och \(\and\) ^
+eller \(\or\) v
+icke \(not\)
+
+CNF = Conjugtive Normal Form
+\begin{equation}
+  (p \or q \or r) \and (p \or r) \and (r \or q)
+\end{equation}
+
+En graf: (V,E) där V är en mängd hörn och E en mängd kanter
+
+En nods omgivning: Angränsande noder samt kanske sig själv beroende på vem man
+frågar
+
+Klick: Kanter mellan alla i mängden
+Oberoende mängd: inte Klick
+
