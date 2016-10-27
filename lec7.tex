@@ -1,0 +1,51 @@
+\section{Lektion 7}
+
+Denna lektion handlar om reduktioner.
+
+\subsection{Reduktion}
+\begin{itemize}
+\item{Nytta, ha ett problem som är svårt och visa att reduktioner är svåra.}
+\item{Resolution: inte klar!\\
+    \(om (p\and A) (\not p\and B)\)}
+\item{Nej är svårt}
+\end{itemize}
+
+\paragraph{Exempel 1}
+\begin{equation}
+  SAT \rightarrow 3SAT
+
+\end{equation}
+
+\paragraph{Exempel 2}
+Det finns en tilldelning till dessa som satisfieras. Gå ifrån reduktionen till
+orginal problemet. 
+\begin{equation}
+  O((n*\log{n}) * m)
+\end{equation}
+
+\paragraph{Exempel 3}
+
+\(3SAT \rightarrow \text{Obegränsad mängd}\)
+
+\begin{itemize}
+\item{Instans: Graf \(G = (V,E)\) och ett heltal \(K \geq O\)}
+\item{Fråga: Innehåller \(G\) en oberoende mängd med minst \(K\) noder?
+ }
+\item{Svar: Ja \(\rightarrow\) Ja \\
+  \((x_1 \and x_2 \and x_3) \or (\not x_1 \and \not x_2 \and \not x_3) \or (\not
+   x_1 \and x_2 \and x_3)\) 
+  
+  }
+\end{itemize}
+
+\paragraph{Nodhölje}
+\begin{itemize}
+\item{Instans: Graf \(G = (V,E)\),  heltal \(K \geq 1\)}
+\item{ Finns nodhölje av storlek \(K\) eller mindre?
+
+  }
+\item{Svar: Reduktion från oberoende mängd. \([G = (V,E), K]\) \\
+    \([G, |V| - K]\)
+
+  }
+\end{itemize}

@@ -1,0 +1,37 @@
+\section{Lektion 11}
+\subsection{Approximations algoritmer}
+\begin{enumerate}
+\item{Omformulera}
+\item{Relaxera}
+\item{Löser det relaxerade problemet}
+\item{Avrundning}
+\end{enumerate}
+\subsubsection{MAX SAT}
+\begin{equation}
+  \frac{OPT}{c} \leq \varepsilon [m(x)] \leq c * OPT \\
+  \text{Förväntat resultat i exemplen: } 0.632 * OPT \and 0.75 * OPT
+\end{equation}
+\paragraph{Exempel 1}
+Änvänd standard stegen för approximations algoritmer.
+\begin{equation}
+  (p \vee \not q \vee r), max Z_1 + \ldots + Z_m, F = C_1 \wedge ldots \wedge C_m \\
+  p + (1-q) + r \geq z_1 \\
+  0 \leq X_1,\ldots,X_n \leq 1 \\
+  0 \leq Z_1,\ldots,Z_m \leq 1 \\
+  (X_1^*,\ldots,X_n^*,Z_1^*,\ldots,Z_m^*) \\
+  x_i \text{ges värdet } 1 \text{med sannolikhet } x_1^* \\
+  (\hat{x}_1,\ldots,\hat{x}_n,\hat{Z}_1,\ldots,\hat{Z}_m) \\
+  \text{Inför stokastiska variabler: } X_1,\ldots,X_m \text{ där X (ska vara med streck över/under) är 1 om klausul $C_i$ satisferas av } (\hat{x}_1,\ldots,\hat{x}_n) \\
+  \text{Låt $C_j$ vara en klausul med $k$ variabler. Sannolikheten att den satisferas är: } \\
+  \geq \beta_K*Z_j^* \text{där} \beta_k= 1 - (1 - \frac{1}{k})^k \\
+  \beta_k \geq 1 - \frac{1}{C} v k \\
+  C_j = (x_1 \vee \ldots \vee x_k), x_1^* + \dots + x_k^* \geq z_j^* \\
+  C_j \text{blir osat omm alla} \hat{x}_1 = \ldots = \hat{x}_k = 0 \\
+  \text{Sannolikheten för detta: gånger || från 1 till k} (1-x_i^*) \\
+  1 - \text{från i = 1 till k} (1-x_i^*) \geq \beta_k * z_j^* \text{då} x_i^* + \ldots + x_k^* \geq z_j^* \\
+  \varepsilon[|X_1+\ldots+X_m|] \lim \varepsilon[|X_q|]+\ldots+\varepsilon[|X_m|] \geq \\
+  \geq \beta_{c_1} * Z_1^* + \ldots + \beta_{c_m} * Z_m^* \geq \\
+  \text{ej färdig, bra på korta klausuler} 
+\end{equation}
+
+

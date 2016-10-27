@@ -1,0 +1,55 @@
+\section{Lektion 10}
+
+\subsection{Inexakta metoder}
+\begin{itemize}
+\item{Stokastisk variabel:
+    statiskt
+  }
+\item{Väntevärde: \\ % Notera [||] ska vara ett annat tecken som liknar de
+    % tillsammans
+    \( [|X|] = \sum{k*p_x(k)} \) \\
+    \( [|X_1 + \ldots + X_k|] = \sum{[|X_1|]} + \ldots + \sum{[|X_k|]}\)
+  }
+\item{Betingad sannolikhet: \\
+    \(Pr(A|B)\) \\
+    Sannolikheten för att $A$ inträffar då $B$ inträffat. \\
+    \(Pr[|X + Y \geq 11 | X = 6 |] = \frac{1}{3}\) 
+  }
+\end{itemize}
+
+\subsubsection{Minsnitt i grafer}
+\begin{itemize}
+\item{Indata: Oriktad graf \(G = (V,E)\)}
+\item{Utdata: \(E^\prime \leq E\) så att \(G - E^\prime\) inte sammanhängande
+    och $E^\prime$ har minimal storlek.}
+\item{Algoritm:
+    \begin{enumerate}
+    \item{Välj båge \((v_i,v_j)\) slumpmässigt i $G$. }
+    \item{Bilda $G^\prime$ genom att kontrahera $v_i$ och $v_j$}
+    \item{Repetera tills grafen innehåller två noder}
+    \end{enumerate}
+  }
+\item{Exempel: \\
+    Låt $C$ vara ett $minsnitt$ i $G$. $\leftarrow n$ noder \\
+    $H_i$ gäller omm vi inte väljer en båge i $C$ i steg $i$ av algoritmen. \\
+    Vi vill visa att \( Pr[H_{1} \vee H_{2} \vee \ldots{} \vee H_{n-2} ]\) är \"{}stor\"{} \\
+    \(k = |C|  |E| \geq \frac{k*n}{2}\) \\
+    \(Pr[H_1] \geq 1 - \frac{k}{\frac{k*n}{2}} = 1 - \frac{2}{n}\) \\
+    \(Pr[H_2 | H_1] \geq 1 - \frac{k}{\frac{k(n-1)}{2}} = 1 - \frac{2}{n-1}\) }
+\end{itemize}
+
+\subsubsection{E3SAT}
+\begin{itemize}
+\item{Instans: 3SAT-formel som innehåller exakt 3 olika variabler/klausuler.}
+\item{Utdata: En tilldelning som gör minst $\frac{7}{8}$ av klausulerna
+    sanna.}
+\item{Algoritm: Ge varje variabel sett slumpmässigt värde.}
+\item{Exempel:
+    \(F = C_1 \vee \ldots \vee C_m\) \\
+    \(X_1 \ldots X_m \) \\
+    Om $C_i$ är satisferad av tilldelningen så är $X_i = 1$ och annars $0$ \\
+    \(\sum{[|X_i|]} = \frac{7}{8}\) \\
+    \(\sum{[|X_1 + \ldots + X_m|]} = \sum{[|X_1|]} + \ldots + \sum{[|X_m|]} =
+    \frac{7}{8} * m\)
+  }
+\end{itemize}

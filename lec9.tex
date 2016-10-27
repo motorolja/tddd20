@@ -1,0 +1,56 @@
+\section{Lektion 9}
+\subsection{Inexakta metoder}
+
+\subsubsection{Approximationsalgoritmer}
+En algoritm approximerar ett visst problem om: \\
+\begin{equation}
+  \div{OPT}{c} \leq m(x) \leq c * OPT
+  \text{Där: } c \geq 1 \text{och OPT = Optimala lösningen}
+  
+\end{equation}
+
+\textbf{Exempel 1: Nodhölje, approximerar inom 2 (troligen den optimala för nodhölje)}
+\begin{itemize}
+\item{Indata: \(G=(V,E)\)  }
+\item{
+    \begin{equation}
+      C \leftarrow \emptyset; A \leftarrow \emptyset \\
+      E\prime \leftarrow E, \\
+      \text{While } E \neq \emptyset \\
+      \indent \text{välj } (u,v) \text{godtyckligt i } E\prime \\
+      \indent A \leftarrow A union {(u,v)} \\
+      \indent C \leftarrow C union {u,v} \\
+      \indent \text{tag bort alla bågar i E$\prime$ som innehåller $u$ eller $v$} \\
+    \end{equation}
+  }
+\item{ \(OPT \leq |C| \leq 2 * OPT\)\\
+    \begin{enumerate}
+    \item{\(|C| = 2 * |A|\)}
+      \item{Varje nodhölje, t.ex. ett optimalt \(C^*\), måste inkludera minst en
+          ändpunkt från varje båge i $A$. \\
+          \(|A| \leq |C^*|\) \\
+        \(|C| = 2 * |A| \leq 2 * |C^*|\)}
+    \end{enumerate}
+    
+  }
+\end{itemize}
+
+
+\textbf{Exempel 2: Nodhölje, approximerar inom 2 (ej optimala för nodhölje)}
+Denna metodik fungerar ofta.
+\begin{enumerate}
+\item Omformulera till matematiskt optimerings problem
+\item Relaxera problemet
+\item Läs relaxerat problem
+\item Avrunda lösningen
+\end{enumerate}
+
+\textbf{Exempel 3: Handelsresandeproblem}
+Omformulera som minst uppspännande träd $T$ med $B$ bågar (TSP). \\
+Traversera trädet $T$ e.g. ta varje båge en gång fram och en gång tillbaka. \\
+Totala kostnaden $V_o = 2 * B$ då får vi: \\
+\(V \leq V_0 = 2 * T \leq 2 * OPT\)
+\begin{itemize}
+
+  
+\end{itemize}

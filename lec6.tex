@@ -1,0 +1,46 @@
+\section{Lektion 6}
+
+\subsection{Beräkningskomplexitet, I}
+Skillnaden mellan algoritmkomplexitet och problemkomplexitet.\\
+
+\begin{itemize}
+\item{Algoritmkomplexitet:
+    Det vi arbetat med innan.
+  }
+\item{Problemkomplexitet:
+    Behandlar mer flummiga betraktelser. \\
+    \begin{itemize}
+      \item{Problem: Ett problem är en funktion som tar en indata mängd och ger
+          utdata i form av ett svar. Finns olika typer, lösbara(beräkningsbara),
+          icke beräkningsbara.}
+      \item{beräkningsbara problem: Ska finnas en algoritm som beräknar svaret.
+          Den ska köra i ändlig tid, ej ta oändliga mängder (uppräkningsbar) som
+          indata. }
+      \item{NP
+          Problemet \(x\epsilon P\) om det kan lösas i polynomisk tid \(X
+          \epsilon NP\) om lösningar kan verifieras i polynomisk tid.
+        }
+    \end{itemize}
+  }
+\end{itemize}
+
+\begin{equation}
+  P = NP
+  \text{Indata: } \oslash
+  \text{Fråga: Är } P = NP \text{?}
+\end{equation}
+
+\subsubsection{Polynomisk reduktion}
+Om du har ett svårt problem \(P_a\) och vill vissa att ett godtyckligt problem
+\(P_i\), givet en polynomisk algoritm $A$, kan du visa att \(P_i\) är svårt?
+\begin{itemize}
+\item{\(P_a\) ska generera samma svar efter $A$.}
+\item{Vad är ett ``svåraste'' problem i \(NP\)?\\
+    
+  }
+\item{Om \(X\) är \(NP\) fullständig och \(X \epsilon P\) är alla problem i
+    \(P\) fullständiga.}
+\end{itemize}
+
+\paragraph{Sidnoter}
+Se ordet reduktion i ``Polynomisk reduktion'' bara som ett ord.
